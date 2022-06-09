@@ -115,7 +115,7 @@ def bc(psi_a, psi_b):
 
 yy = np.linspace(0, 4e-7, 200)
 psii = np.zeros((2, yy.size))
-fig = plt.figure(figsize=(10, 8))
+fig, ax = plt.subplots(figsize=(12, 10))
 fig.set_dpi(200)
 Vgs = np.linspace(-2, 2, 21)
 color = iter(plt.cm.rainbow(np.linspace(-1, 1.5, 21)))
@@ -137,15 +137,16 @@ for i in Vgs:
 plt.legend(loc='upper right', bbox_to_anchor=(1.2, 1))
 plt.xlabel("Vertical Distance, $y$ (nm)", fontsize=20)
 plt.ylabel("Potential, $\psi(y)$    (V)", fontsize=20)
-plt.xticks(fontsize=15)
 plt.yticks(fontsize=15)
+ticks = ax.get_xticks()[1:]*10**9
+ax.set_xticklabels(ticks, fontsize=15)
 plt.xlim(0)
 plt.show()
 
 
 yy = np.linspace(0, 4e-7, 200)
 psii = np.zeros((2, yy.size))
-fig = plt.figure(figsize=(10, 8))
+fig, ax = plt.subplots(figsize=(12, 10))
 fig.set_dpi(200)
 Vgs = np.linspace(-5, -2, 21)
 color = iter(plt.cm.rainbow(np.linspace(-1, 1.5, 21)))
@@ -167,15 +168,16 @@ for i in Vgs:
 plt.legend(loc='upper right', bbox_to_anchor=(1.2, 1))
 plt.xlabel("Vertical Distance, $y$ (nm)", fontsize=20)
 plt.ylabel("Potential, $\psi(y)$    (V)", fontsize=20)
-plt.xticks(fontsize=15)
 plt.yticks(fontsize=15)
+ticks = ax.get_xticks()[1:]*10**9
+ax.set_xticklabels(ticks, fontsize=15)
 plt.xlim(0)
 plt.show()
 
 
 yy = np.linspace(0, 4e-7, 200)
 psii = np.zeros((2, yy.size))
-fig = plt.figure(figsize=(10, 8))
+fig, ax = plt.subplots(figsize=(12, 10))
 fig.set_dpi(200)
 Vgs = np.linspace(2, 4.5, 21)
 color = iter(plt.cm.rainbow(np.linspace(-1, 1.5, 21)))
@@ -197,8 +199,9 @@ for i in Vgs:
 plt.legend(loc='upper right', bbox_to_anchor=(1.2, 1))
 plt.xlabel("Vertical Distance, $y$ (nm)", fontsize=20)
 plt.ylabel("Potential, $\psi(y)$    (V)", fontsize=20)
-plt.xticks(fontsize=15)
 plt.yticks(fontsize=15)
+ticks = ax.get_xticks()[1:]*10**9
+ax.set_xticklabels(ticks, fontsize=15)
 plt.xlim(0)
 plt.show()
 
